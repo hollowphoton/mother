@@ -1,9 +1,10 @@
 {
     "Actor": {
-        "types": ["pc","merc","monster","ship","crew"],
+        "types": ["character","mercenary","monster","ship","crew"],
         "templates": {
             "common": {
                 "attributes": {
+                    "level": 0,
                     "job":  {
                         "title": "",
                         "ship": ""
@@ -13,7 +14,7 @@
                         "public": ""
                     },
                     "currency": {
-                    "credits": 0
+                        "credits": 0
                     },
                     "notes": ""
                 }
@@ -35,7 +36,7 @@
                 }
             },
             "basic": {
-                "saves": {
+                "stats": {
                     "instinct": {
                         "value": 0,
                         "min": 0,
@@ -61,7 +62,7 @@
                 }
             }
         },
-        "pc": {
+        "character": {
             "templates": ["common","combat","standard"],
             "stats": {
                 "strength": {
@@ -139,7 +140,7 @@
                 }
             }
         },
-        "merc": {
+        "mercenary": {
             "templates": ["common","combat","basic"],
             "stats": {
                 "loyalty": {
@@ -263,7 +264,13 @@
             }            
         },
         "crew": {
-            "templates": ["common"]
+            "attributes": {
+                "history": "",
+                "currency": {
+                    "credits": 0
+                },
+                "notes": ""
+            }
         }
     },
     "Item": {
