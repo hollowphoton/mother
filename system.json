@@ -1,11 +1,14 @@
 {
     "name": "mother",
     "title": "Mother",
-    "description": "A system for playing the Mothership tabletop roleplaying game.",
-    "author": "Chris Schmalz",
+    "description": "A system for playing the Mothership tabletop roleplaying game",
+    "author": "hollowphoton",
     "version": 0.01,
     "minimumCoreVersion": "0.7.6",
     "compatibleCoreVersion": "0.7.6",
+    "scripts": [
+
+    ],
     "esmodules": [
         "mother.js"
     ],
@@ -18,9 +21,14 @@
     "languages": [
         
     ],
+    "socket": false,
     "gridDistance": 5,
     "gridUnits": "ft",
-    "primaryTokenAttribute": "health",
-    "secondaryTokenAttribute": "stress",
-    "initiative": "1d100"
+    "primaryTokenAttribute": "attributes.health",
+    "secondaryTokenAttribute": "attributes.stress",
+    "initiative": "1d100",
+    "url": "https://github.com/hollowphoton/mother",
+    "manifest": "https://raw.githubusercontent.com/hollowphoton/mother/main/system.json",
+    "download": "",
+    "license": "license.txt"
 }

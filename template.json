@@ -1,8 +1,301 @@
 {
     "Actor": {
-
+        "types": ["pc","merc","monster","ship","crew"],
+        "templates": {
+            "common": {
+                "attributes": {
+                    "job":  {
+                        "title": "",
+                        "ship": ""
+                    },
+                    "biography": {
+                        "value": "",
+                        "public": ""
+                    },
+                    "currency": {
+                    "credits": 0
+                    },
+                    "notes": ""
+                }
+            },
+            "combat": {
+                "stats": {
+                    "combat": {
+                        "value": 0,
+                        "min": 0,
+                        "max": 85
+                    }
+                },
+                "attributes": {
+                    "initiative": {
+                        "value": 0,
+                        "max": 0,
+                        "turnGroup": 0
+                    }
+                }
+            },
+            "basic": {
+                "saves": {
+                    "instinct": {
+                        "value": 0,
+                        "min": 0,
+                        "max": 85
+                    }
+                },
+                "attributes": {
+                    "hits": {
+                        "value": 0,
+                        "min": 0,
+                        "max": 0,
+                        "hitSize": 0
+                    }
+                }
+            },
+            "standard": {
+                "stats": {
+                    "speed": {
+                        "value": 0,
+                        "min": 0,
+                        "max": 85
+                    }
+                }
+            }
+        },
+        "pc": {
+            "templates": ["common","combat","standard"],
+            "stats": {
+                "strength": {
+                    "value": 0,
+                    "min": 0,
+                    "max": 85
+                },
+                "intellect": {
+                    "value": 0,
+                    "min": 0,
+                    "max": 85
+                },
+                "combat": {
+                    "value": 0,
+                    "min": 0,
+                    "max": 85
+                }
+            },
+            "saves": {
+                "sanity": {
+                    "value": 0,
+                    "min": 0,
+                    "max": 85
+                },
+                "fear": {
+                    "value": 0,
+                    "min": 0,
+                    "max": 85
+                },
+                "body": {
+                    "value": 0,
+                    "min": 0,
+                    "max": 85
+                },
+                "armor": {
+                    "value": 0,
+                    "min": 0,
+                    "max": 85
+                }
+            },
+            "attributes": {
+                "health": {
+                    "value": 0,
+                    "min": 0,
+                    "max": 0
+                },
+                "stress": {
+                    "value": 2,
+                    "min": 0,
+                    "max": 100
+                },
+                "resolve": {
+                    "value": 0,
+                    "min": 0,
+                    "max": 5
+                },
+                "cybermods": {
+                    "cyberwareSlots": 0,
+                    "slicksocket": false,
+                    "slickwareSlots": 0,
+                    "sycoraxTaken": 0,
+                    "overclock": 0
+                }
+            },
+            "afflictions": {
+                "acmd": {
+                    "value": 0,
+                    "min": 0,
+                    "max": 10
+                },
+                "bends": {
+                    "value": 0,
+                    "min": 0,
+                    "max": 100
+                }
+            }
+        },
+        "merc": {
+            "templates": ["common","combat","basic"],
+            "stats": {
+                "loyalty": {
+                    "value": 0,
+                    "min": 0,
+                    "max": 85
+                }
+            }
+        },
+        "monster": {
+            "templates": ["combat","basic","standard"]
+        },
+        "ship": {           
+            "templates": ["combat","standard"],
+            "stats": {
+                "intellect": {
+                    "value": 0,
+                    "min": 0,
+                    "max": 85
+                },
+                "armor": {
+                    "value": 0,
+                    "min": 0,
+                    "max": 80
+                }
+            },
+            "modules": {
+                "lifeSupport": {
+                    "installed": true,
+                    "passengers": 0,
+                    "divider": 10
+                },
+                "command": {
+                    "installed": true,
+                    "officers": 0,
+                    "divider": 4
+                },
+                "armor": {
+                    "installed": true,
+                    "point": 0,
+                    "max": 8,
+                    "multiplier": 3
+                },
+                "jumpDrives": {
+                    "installed": false,
+                    "drives": 0,
+                    "max": 9
+                },
+                "computer": {
+                    "installed": false,
+                    "modules": 0
+                },
+                "galley": {
+                    "installed": false,
+                    "modules": 0,
+                    "sufficient": false
+                },
+                "weaponMount": {
+                    "installed": false,
+                    "mounts":0
+                },
+                "medicalBay": {
+                    "installed": false,
+                    "modules": 0,
+                    "connectedModules": 0
+                },
+                "cryoChamber": {
+                    "installed": false,
+                    "pods": 0
+                },
+                "livingQuarters": {
+                    "installed": false,
+                    "rooms": 0
+                },
+                "barracks": {
+                    "installed": false,
+                    "crew": 0,
+                    "divider": 12
+                },
+                "cargoHold": {
+                    "installed": false,
+                    "units": 0,
+                    "divider": 10
+                },
+                "scienceLab": {
+                    "installed": false,
+                    "modules": 0,
+                    "connectedModules": 0
+                },
+                "thrusters": {
+                    "installed": true,
+                    "modules": 0
+                },
+                "engine": {
+                    "installed": true
+                },
+                "fuel": {
+                    "installed": true,
+                    "extra": 0
+                },
+                "frame": {
+                    "installed": true
+                }
+            },
+            "attributes": {
+                "hull": {
+                    "value": 0,
+                    "min": 0,
+                    "max": 0
+                },
+                "fuel": {
+                    "value": 0,
+                    "min": 0,
+                    "max": 100
+                },
+                "galley": {
+                    "value": 0,
+                    "min": 0,
+                    "max": 100
+                }
+            }            
+        },
+        "crew": {
+            "templates": ["common"]
+        }
     },
     "Item": {
-        
+        "types": ["class","skill","condition","weapon","equipment","tool","consumable","item","debt"],
+        "templates": {
+            "description": {
+                "value": ""
+            }
+        },
+        "skill": {
+            "templates": ["description"]
+        },
+        "condition": {
+            "templates": ["description"]
+        },
+        "weapon": {
+            "templates": ["description"]
+        },
+        "ammo": {
+            "templates": ["description"]
+        },
+        "apparel": {
+            "templates": ["description"]
+        },
+        "item": {
+            "templates": ["description"]
+        },
+        "debt": {
+            "templates": ["description"],
+            "creditor": "",
+            "debtor": "",
+            "credits": ""
+        }
     }
 }
