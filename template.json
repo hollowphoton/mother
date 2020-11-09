@@ -269,30 +269,40 @@
     "Item": {
         "types": ["class","skill","condition","weapon","equipment","tool","consumable","item","debt"],
         "templates": {
-            "description": {
-                "value": ""
+            "common": {
+                "attributes": {
+                    "description": {
+                        "value": ""
+                    }
+                }
             }
         },
+        "class": {
+            "templates": ["common"]
+        },
         "skill": {
-            "templates": ["description"]
+            "templates": ["common"]
         },
         "condition": {
-            "templates": ["description"]
+            "templates": ["common"]
         },
         "weapon": {
-            "templates": ["description"]
+            "templates": ["common"]
         },
-        "ammo": {
-            "templates": ["description"]
+        "equipment": {
+            "templates": ["common"]
         },
-        "apparel": {
-            "templates": ["description"]
+        "tool": {
+            "templates": ["common"]
+        },
+        "consumable": {
+            "templates": ["common"]
         },
         "item": {
-            "templates": ["description"]
+            "templates": ["common"]
         },
         "debt": {
-            "templates": ["description"],
+            "templates": ["common"],
             "creditor": "",
             "debtor": "",
             "credits": ""
