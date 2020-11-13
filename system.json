@@ -23,7 +23,7 @@
     ],
     "socket": false,
     "gridDistance": 5,
-    "gridUnits": "ft",
+    "gridUnits": "m",
     "primaryTokenAttribute": "attributes.health",
     "secondaryTokenAttribute": "attributes.stress",
     "initiative": "1d100",

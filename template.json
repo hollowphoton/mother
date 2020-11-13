@@ -13,9 +13,7 @@
                         "value": "",
                         "public": ""
                     },
-                    "currency": {
-                        "credits": 0
-                    },
+                    "credits": 0,
                     "notes": ""
                 }
             },
@@ -114,6 +112,11 @@
                     "min": 0,
                     "max": 100
                 },
+                "calm": {
+                    "value": 85,
+                    "min": 0,
+                    "max": 85
+                },
                 "resolve": {
                     "value": 0,
                     "min": 0,
@@ -167,84 +170,6 @@
                     "max": 80
                 }
             },
-            "modules": {
-                "lifeSupport": {
-                    "installed": true,
-                    "passengers": 0,
-                    "divider": 10
-                },
-                "command": {
-                    "installed": true,
-                    "officers": 0,
-                    "divider": 4
-                },
-                "armor": {
-                    "installed": true,
-                    "point": 0,
-                    "max": 8,
-                    "multiplier": 3
-                },
-                "jumpDrives": {
-                    "installed": false,
-                    "drives": 0,
-                    "max": 9
-                },
-                "computer": {
-                    "installed": false,
-                    "modules": 0
-                },
-                "galley": {
-                    "installed": false,
-                    "modules": 0,
-                    "sufficient": false
-                },
-                "weaponMount": {
-                    "installed": false,
-                    "mounts":0
-                },
-                "medicalBay": {
-                    "installed": false,
-                    "modules": 0,
-                    "connectedModules": 0
-                },
-                "cryoChamber": {
-                    "installed": false,
-                    "pods": 0
-                },
-                "livingQuarters": {
-                    "installed": false,
-                    "rooms": 0
-                },
-                "barracks": {
-                    "installed": false,
-                    "crew": 0,
-                    "divider": 12
-                },
-                "cargoHold": {
-                    "installed": false,
-                    "units": 0,
-                    "divider": 10
-                },
-                "scienceLab": {
-                    "installed": false,
-                    "modules": 0,
-                    "connectedModules": 0
-                },
-                "thrusters": {
-                    "installed": true,
-                    "modules": 0
-                },
-                "engine": {
-                    "installed": true
-                },
-                "fuel": {
-                    "installed": true,
-                    "extra": 0
-                },
-                "frame": {
-                    "installed": true
-                }
-            },
             "attributes": {
                 "hull": {
                     "value": 0,
@@ -256,7 +181,7 @@
                     "min": 0,
                     "max": 100
                 },
-                "galley": {
+                "stock": {
                     "value": 0,
                     "min": 0,
                     "max": 100
@@ -266,53 +191,104 @@
         "crew": {
             "attributes": {
                 "history": "",
-                "currency": {
-                    "credits": 0
-                },
+                "credits": 0,
                 "notes": ""
             }
         }
     },
     "Item": {
-        "types": ["class","skill","condition","weapon","equipment","tool","consumable","item","debt"],
+        "types": ["class","skill","module","condition","weapon","item","consumable","debt"],
         "templates": {
             "common": {
                 "attributes": {
-                    "description": {
-                        "value": ""
+                    "description": ""
+                }
+            },
+            "tangible": {
+                "attributes": {
+                    "cost": 0,
+                    "equipped": false
+                }
+            },
+            "weapon": {
+                "usage": {
+                    "damage": "",
+                    "critical": "",
+                    "range": {
+                        "closeQuartersCombatOnly": false,
+                        "short": 0,
+                        "medium": 0,
+                        "long": 0
+                    },
+                    "special": "",
+                    "requiresConsumable": false,
+                    "consumables": {
+                        "untrainedShots": 0,
+                        "trainedShots": 0,
+                        "consumableUsed": "",
+                        "shotCapacity": 0,
+                        "shotsLeft": 0 
                     }
                 }
             }
         },
         "class": {
-            "templates": ["common"]
+            "templates": ["common"],
+            "startingSkillPoints": 0,
+            "startingSave": {
+                "sanity": 0,
+                "fear": 0,
+                "body": 0,
+                "armor": 0
+            },
+            "statBoost": {
+                "strength": 0,
+                "speed": 0,
+                "intellect": 0,
+                "sanity": 0
+            },
+            "stressTrait": ""
         },
         "skill": {
-            "templates": ["common"]
+            "templates": ["common"],
+            "type": "",
+            "statBonus": 0,
+            "prerequisite": []
+        },
+        "module": {
+            "required": false,
+            "curPoints": 0,
+            "maxPoints": 0,
+            "moduleMultiplierNumerator": 0,
+            "moduleMultiplierDenominator": 0,
+            "hullMultiplierNumerator": 0,
+            "hullMultiplierDenominator": 0,
+            "sufficientModules": false,
+            "connectedModules": 0
         },
         "condition": {
             "templates": ["common"]
         },
         "weapon": {
-            "templates": ["common"]
-        },
-        "equipment": {
-            "templates": ["common"]
-        },
-        "tool": {
-            "templates": ["common"]
-        },
-        "consumable": {
-            "templates": ["common"]
+            "templates": ["common","tangible","weapon"]
         },
         "item": {
-            "templates": ["common"]
+            "templates": ["common","tangible"]
+        },
+        "consumable": {
+            "templates": ["common","tangible"]
         },
         "debt": {
             "templates": ["common"],
             "creditor": "",
-            "debtor": "",
-            "credits": ""
+            "cost": ""
         }
     }
 }
+
+
+
+
+
+
+
