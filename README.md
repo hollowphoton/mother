@@ -1,7 +1,6 @@
 # mother
 A Mothership system for FoundryVTT
 
-
 ## Long Terms Goals
 
 - House rules: calm, traash stuff, failure tolerated, etc
@@ -9,7 +8,7 @@ A Mothership system for FoundryVTT
 - 'Stepmother' my own house ruleset
 
 ## Short Terms Goals
------------------
+
 - Character Sheet
 - Ship Sheet
 - Item Sheets
