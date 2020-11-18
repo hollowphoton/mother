@@ -1,19 +1,6 @@
 # mother
-A Mothership system for FoundryVTT
+A Mothership system for FoundryVTT. Once this system is in a testable state, I will be presenting it on the MoSh discord for approval by TKG via Discord.
 
-## Long Terms Goals
+## Where I left off
 
-- House rules: calm, traash stuff, failure tolerated, etc
-- Auto roll + attack
-- 'Stepmother' my own house ruleset
-
-## Short Terms Goals
-
-- Character Sheet
-- Ship Sheet
-- Item Sheets
-- Rolls for Stats/Saves/Panic
-- Healing/Resting
-- Item buffs making active effect
-- weapons use consumable ammo
-- design that looks just like the zine
+- Weapon item sheet created (first sheet), looks good. Only issue is some variables are not storing properly, only those nested below the main level. How to do shots.remaining correctly?

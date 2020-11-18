@@ -1,6 +1,6 @@
 {
     "Actor": {
-        "types": ["character","mercenary","monster","ship","crew"],
+        "types": ["character","mercenary","monster","ship"],
         "templates": {
             "common": {
                 "attributes": {
@@ -187,17 +187,10 @@
                     "max": 100
                 }
             }            
-        },
-        "crew": {
-            "attributes": {
-                "history": "",
-                "credits": 0,
-                "notes": ""
-            }
         }
     },
     "Item": {
-        "types": ["class","skill","module","condition","weapon","item","consumable","debt"],
+        "types": ["class","skill","module","condition","weapon","item","debt"],
         "templates": {
             "common": {
                 "attributes": {
@@ -206,35 +199,16 @@
             },
             "tangible": {
                 "attributes": {
+                    "type": "",
                     "cost": 0,
                     "equipped": false
-                }
-            },
-            "weapon": {
-                "usage": {
-                    "damage": "",
-                    "critical": "",
-                    "range": {
-                        "closeQuartersCombatOnly": false,
-                        "short": 0,
-                        "medium": 0,
-                        "long": 0
-                    },
-                    "special": "",
-                    "requiresConsumable": false,
-                    "consumables": {
-                        "untrainedShots": 0,
-                        "trainedShots": 0,
-                        "consumableUsed": "",
-                        "shotCapacity": 0,
-                        "shotsLeft": 0 
-                    }
                 }
             }
         },
         "class": {
             "templates": ["common"],
             "startingSkillPoints": 0,
+            "startingSkills": [],
             "startingSave": {
                 "sanity": 0,
                 "fear": 0,
@@ -245,7 +219,7 @@
                 "strength": 0,
                 "speed": 0,
                 "intellect": 0,
-                "sanity": 0
+                "combat": 0
             },
             "stressTrait": ""
         },
@@ -256,6 +230,7 @@
             "prerequisite": []
         },
         "module": {
+            "templates": ["common"],
             "required": false,
             "curPoints": 0,
             "maxPoints": 0,
@@ -270,17 +245,32 @@
             "templates": ["common"]
         },
         "weapon": {
-            "templates": ["common","tangible","weapon"]
+            "templates": ["common","tangible"],
+            "damage": "",
+            "critical": "",
+            "range": {
+                "type": "",
+                "short": 0,
+                "medium": 0,
+                "long": 0
+            },
+            "special": "",
+            "ammunition": "",
+            "shots": {
+                "untrained": 0,
+                "trained": 0,
+                "capacity": 0,
+                "loaded": 0,
+                "remainingAmmo": 0
+            }
         },
         "item": {
             "templates": ["common","tangible"]
-        },
-        "consumable": {
-            "templates": ["common","tangible"]
+
         },
         "debt": {
             "templates": ["common"],
-            "creditor": "",
+            "owed_to": "",
             "cost": ""
         }
     }

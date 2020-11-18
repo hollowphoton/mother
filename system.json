@@ -3,7 +3,7 @@
     "title": "Mothership",
     "description": "A system for playing the Mothership tabletop roleplaying game",
     "author": "hollowphoton",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "minimumCoreVersion": "0.7.6",
     "compatibleCoreVersion": "0.7.7",
     "scripts": [
@@ -19,7 +19,11 @@
 
     ],
     "languages": [
-        
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        }
     ],
     "socket": false,
     "gridDistance": 5,

@@ -1,0 +1,18 @@
+{
+    "mother": {
+        "weapon": {
+            "damage": "Damage",
+            "critical": "Critical",
+            "range": "Range",
+            "rangeS": "Short",
+            "rangeM": "Medium",
+            "rangeL": "Long",
+            "special": "Special",
+            "ammunition": "Ammunition",
+            "shots": "Shots",
+            "shotCapacity": "Shot Capacity",
+            "shotsLoaded": "Shots Loaded",
+            "ammoRemaining": "Ammo Remaining"
+        }
+    }
+}

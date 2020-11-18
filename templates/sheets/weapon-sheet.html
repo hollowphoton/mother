@@ -3,5 +3,57 @@
         <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
     </header>
-    <p>MOTHERSHIP</p>
+    <div>
+        <table>
+            <tr>
+                <th>{{localize "mother.weapon.damage"}}</th>
+                <th>{{localize "mother.weapon.critical"}}</th>
+                <th>{{localize "mother.weapon.range"}}</th>
+                <th>{{localize "mother.weapon.rangeS"}}</th>
+                <th>{{localize "mother.weapon.rangeM"}}</th>
+                <th>{{localize "mother.weapon.rangeL"}}</th>
+                <th>{{localize "mother.weapon.special"}}</th>
+                <th>{{localize "mother.weapon.ammunition"}}</th>
+                <th>{{localize "mother.weapon.shotCapacity"}}</th>
+                <th>{{localize "mother.weapon.shotsLoaded"}}</th>
+                <th>{{localize "mother.weapon.ammoRemaining"}}</th>
+            </tr>
+            <tr>
+                <td>
+                    <input name="data.damage" type="text" value="{{data.damage}}" />
+                </td>
+                <td>
+                    <input name="data.critical" type="text" value="{{data.critical}}" />
+                </td>
+                <td>
+                    <input name="data.range" type="text" value="{{data.range.type}}" />
+                </td>
+                <td>
+                    <input name="data.rangeS" type="text" value="{{data.range.short}}" />
+                </td>
+                <td>
+                    <input name="data.rangeM" type="text" value="{{data.range.medium}}" />
+                </td>
+                <td>
+                    <input name="data.rangeL" type="text" value="{{data.range.long}}" />
+                </td>
+                <td>
+                    <input name="data.special" type="text" value="{{data.special}}" />
+                </td>
+                <td>
+                    <input name="data.ammunition" type="text" value="{{data.ammunition}}" />
+                </td>
+                <td>
+                    <input name="data.shotCapacity" type="text" value="{{data.shots.capacity}}" data-dtype="Number" />
+                </td>
+                <td>
+                    <input name="data.shotsLoaded" type="text" value="{{data.shots.loaded}}" data-dtype="Number" />
+                </td>
+                <td>
+                    <input name="data.ammoRemaining" type="text" value="{{data.shots.remainingAmmo}}" data-dtype="Number" />
+                </td>
+            <tr>
+        </table>
+        <textarea name="data.description">{{data.description}}</textarea>
+    </div>
 </form>
