@@ -3,4 +3,4 @@ A Mothership system for FoundryVTT. Once this system is in a testable state, I w
 
 ## Where I left off
 
-- Weapon item sheet created (first sheet), looks good. Only issue is some variables are not storing properly, only those nested below the main level. How to do shots.remaining correctly?
+- Create wireframe actor and item sheets for each type. Weapon wireframe is done.
