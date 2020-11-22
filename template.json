@@ -30,7 +30,8 @@
                         "value": 0,
                         "max": 0,
                         "turnGroup": 0
-                    }
+                    },
+                    "triggerDiscipline": false
                 }
             },
             "basic": {
@@ -58,10 +59,16 @@
                         "max": 85
                     }
                 }
+            },
+            "levels": {
+                "attributes": {
+                    "xp": 0,
+                    "level": 0
+                }
             }
         },
         "character": {
-            "templates": ["common","combat","standard"],
+            "templates": ["common","combat","standard","levels"],
             "stats": {
                 "strength": {
                     "value": 0,
@@ -129,22 +136,10 @@
                     "sycoraxTaken": 0,
                     "overclock": 0
                 }
-            },
-            "afflictions": {
-                "acmd": {
-                    "value": 0,
-                    "min": 0,
-                    "max": 10
-                },
-                "bends": {
-                    "value": 0,
-                    "min": 0,
-                    "max": 100
-                }
             }
         },
         "mercenary": {
-            "templates": ["common","combat","basic"],
+            "templates": ["common","combat","basic","levels"],
             "stats": {
                 "loyalty": {
                     "value": 0,
@@ -186,7 +181,7 @@
                     "min": 0,
                     "max": 100
                 }
-            }            
+            }
         }
     },
     "Item": {
@@ -242,14 +237,22 @@
             "connectedModules": 0
         },
         "condition": {
-            "templates": ["common"]
+            "templates": ["common"],
+            "stages": false,
+            "stage": {
+                "value": 0,
+                "min": 0,
+                "max": 0
+            },
+            "conditionVisible": true,
+            "stageVisible": true
         },
         "weapon": {
             "templates": ["common","tangible"],
             "damage": "",
             "critical": "",
             "range": {
-                "type": "",
+                "cqc": false,
                 "short": 0,
                 "medium": 0,
                 "long": 0

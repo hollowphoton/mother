@@ -3,7 +3,7 @@ export const mother = {};
 mother.weapon = {
     damage: "mother.weapon.damage",
     critical: "mother.weapon.critical",
-    range: "mother.weapon.range",
+    cqc: "mother.weapon.cqc",
     rangeS: "mother.weapon.rangeS",
     rangeM: "mother.weapon.rangeM",
     rangeL: "mother.weapon.rangeL",

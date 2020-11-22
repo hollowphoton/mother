@@ -3,7 +3,7 @@
         "weapon": {
             "damage": "Damage",
             "critical": "Critical",
-            "range": "Range",
+            "cqc": "CQC Only",
             "rangeS": "Short",
             "rangeM": "Medium",
             "rangeL": "Long",

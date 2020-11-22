@@ -7,53 +7,70 @@
         <table>
             <tr>
                 <th>{{localize "mother.weapon.damage"}}</th>
-                <th>{{localize "mother.weapon.critical"}}</th>
-                <th>{{localize "mother.weapon.range"}}</th>
+                <th>{{localize "mother.weapon.cqc"}}</th>
                 <th>{{localize "mother.weapon.rangeS"}}</th>
                 <th>{{localize "mother.weapon.rangeM"}}</th>
                 <th>{{localize "mother.weapon.rangeL"}}</th>
-                <th>{{localize "mother.weapon.special"}}</th>
-                <th>{{localize "mother.weapon.ammunition"}}</th>
                 <th>{{localize "mother.weapon.shotCapacity"}}</th>
                 <th>{{localize "mother.weapon.shotsLoaded"}}</th>
                 <th>{{localize "mother.weapon.ammoRemaining"}}</th>
             </tr>
             <tr>
                 <td>
-                    <input name="data.damage" type="text" value="{{data.damage}}" />
+                    <input name="data.damage" type="text" value="{{data.damage}}" data-dtype="String" />
                 </td>
                 <td>
-                    <input name="data.critical" type="text" value="{{data.critical}}" />
+                    <input name="data.range.cqc" type="checkbox" value="{{checked data.range.cqc}}" data-dtype="Boolean" />
                 </td>
                 <td>
-                    <input name="data.range" type="text" value="{{data.range.type}}" />
+                    <input name="data.range.short" type="text" value="{{data.range.short}}" data-dtype="String" />
                 </td>
                 <td>
-                    <input name="data.rangeS" type="text" value="{{data.range.short}}" />
+                    <input name="data.range.medium" type="text" value="{{data.range.medium}}" data-dtype="String" />
                 </td>
                 <td>
-                    <input name="data.rangeM" type="text" value="{{data.range.medium}}" />
+                    <input name="data.range.long" type="text" value="{{data.range.long}}" data-dtype="String" />
                 </td>
                 <td>
-                    <input name="data.rangeL" type="text" value="{{data.range.long}}" />
+                    <input name="data.shots.capacity" type="text" value="{{data.shots.capacity}}" data-dtype="Number" />
                 </td>
                 <td>
-                    <input name="data.special" type="text" value="{{data.special}}" />
+                    <input name="data.shots.loaded" type="text" value="{{data.shots.loaded}}" data-dtype="Number" />
                 </td>
                 <td>
-                    <input name="data.ammunition" type="text" value="{{data.ammunition}}" />
-                </td>
-                <td>
-                    <input name="data.shotCapacity" type="text" value="{{data.shots.capacity}}" data-dtype="Number" />
-                </td>
-                <td>
-                    <input name="data.shotsLoaded" type="text" value="{{data.shots.loaded}}" data-dtype="Number" />
-                </td>
-                <td>
-                    <input name="data.ammoRemaining" type="text" value="{{data.shots.remainingAmmo}}" data-dtype="Number" />
+                    <input name="data.shots.remainingAmmo" type="text" value="{{data.shots.remainingAmmo}}" data-dtype="Number" />
                 </td>
             <tr>
         </table>
-        <textarea name="data.description">{{data.description}}</textarea>
+        <table>
+            <tr>
+                <th>{{localize "mother.weapon.critical"}}</th>
+            </tr>
+            <tr>
+                <td>
+                    <input name="data.critical" type="text" value="{{data.critical}}" data-dtype="String" />
+                </td>
+            <tr>
+        </table>
+        <table>
+            <tr>
+                <th>{{localize "mother.weapon.special"}}</th>
+            </tr>
+            <tr>
+                <td>
+                    <input name="data.special" type="text" value="{{data.special}}" data-dtype="String" />
+                </td>
+            <tr>
+        </table>
+        <table>
+            <tr>
+                <th>{{localize "mother.weapon.ammunition"}}</th>
+            </tr>
+            <tr>
+                <td>
+                    <input name="data.ammunition" type="text" value="{{data.ammunition}}" data-dtype="String" />
+                </td>
+            <tr>
+        </table>
     </div>
 </form>
